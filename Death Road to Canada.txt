@@ -1,0 +1,14 @@
+base 0x400000 
+
+Gas = 009DC468
+Food = 009DC464
+Dolt ammo = 009DC470
+Rifle ammo = 009DC474
+Shotgun ammo = 009DC478
+Medkit = 009DC46C
+
+P1 inventory
+Dolt Ammo = 009DCA70
+Rifle Ammo = 009DCA74
+Shotgun Ammo = 009DCA78
+Gas Ammo = 009DCA68
