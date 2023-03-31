@@ -13,7 +13,7 @@ try:
     process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
     process.open()
     print("DR2C Hacks by XiAnzheng Enjoy")
-    print("Feature:\nUnlimited Inventory")
+    print("Feature:\nUnlimited Loot/Supply")
     print("Player 1 Unlimited Ammo & Health")
     print("Weapon & Item Editor")
 
