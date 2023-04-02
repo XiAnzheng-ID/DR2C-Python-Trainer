@@ -3,56 +3,53 @@ from ReadWriteMemory import ReadWriteMemoryError
 import ctypes
 import os
 import subprocess
+import time
 
-ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer")
+ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v03.04.2023 , Enjoy :D ")
 os.system('cls')
 rwm = ReadWriteMemory()
 
 try:
-    subprocess.Popen(["python", "Editor.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
     process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
     process.open()
-    print("DR2C Hacks by XiAnzheng Enjoy")
-    print("Feature:\nUnlimited Loot/Supply")
-    print("Player 1 Unlimited Ammo & Health")
-    print("Weapon & Item Editor")
-
-    #Inventory
-    Gas = process.get_pointer(0x9DC468)
-    Food = process.get_pointer(0x9DC464)
-    Dolt = process.get_pointer(0x9DC470)
-    Rifle = process.get_pointer(0x9DC474)
-    Shotgun = process.get_pointer(0x9DC478)
-    Medkit = process.get_pointer(0x9DC46C)
-
-    #P1 Ammo & health
-    doltAmmo = process.get_pointer(0x9DCA70)
-    rifleAmmo = process.get_pointer(0x9DCA74)
-    shotgunAmmo = process.get_pointer(0x9DCA78)
-    gasAmmo = process.get_pointer(0x9DCA68)
-    Health = process.get_pointer(0x9DC918)
 
     while True:
-        #Inventory
-        process.write(Gas, 99999)
-        process.write(Food, 99999)
-        process.write(Dolt, 99999)
-        process.write(Rifle, 99999)
-        process.write(Shotgun, 99999)
-        process.write(Medkit, 99999)
-        process.write(doltAmmo, 99999)
+        print("https://github.com/XiAnzheng-ID/DR2C-Python-Trainer-with-Inventory-Editor")
+        print("Feature:\n1. Unlimited Loot/Supply")
+        print("2. P1 Unlimited Ammo")
+        print("3. Unlimited Health")
+        print("4. P1 Max Stat")
+        print("5. Weapon & Item Editor")
+        print("6. Manual Supply Editor\n")
+        choice = int(input("Choice?: "))
 
-        #P1 Ammo & Health 
-        process.write(rifleAmmo, 99999)
-        process.write(shotgunAmmo, 99999)
-        process.write(gasAmmo, 99999)
-        process.write(Health, 6)
-
+        if choice == 1:
+            subprocess.Popen(["python", "Loot.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 2:
+            subprocess.Popen(["python", "Ammo.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 3:
+            subprocess.Popen(["python", "Health.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 4:
+            subprocess.Popen(["python", "Stats.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 5:
+            subprocess.Popen(["python", "Editor.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 6:
+            subprocess.Popen(["python", "Manual.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        else:
+            print("Error , put 1-5 on the console")
+            time.sleep(2)
+            os.system('cls')
 
 except ReadWriteMemoryError as error:
     print(error)
-    print("Error tidak dapat menemukan/menulis process\ncoba jalankan sebagai admin")
-
+    print("Error cant write/found the process , try run it as administrator")
+    print("Does the game running? , or check the process name in the code and try again")
 
 #ignore this as the memory pattern in this game is static no need to find the pointer
 #base = 0x400000
