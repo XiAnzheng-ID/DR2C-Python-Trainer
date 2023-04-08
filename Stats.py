@@ -11,6 +11,6 @@ process.open()
 
 print("Dont Close this window just minimized it")
 print("Close it when you want to turn off this feature")
-print("This feature still in development right now only the morale that affected")
+print("This feature still in development right now only morale that affected")
 while True:
     process.write(Offset.Morale, 98300)

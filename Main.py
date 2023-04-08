@@ -1,3 +1,5 @@
+print("if you see this text\ndo (pip install ReadWriteMemory) on python console\nwithout the () symbol")
+print("or read the version text") 
 from ReadWriteMemory import ReadWriteMemory
 from ReadWriteMemory import ReadWriteMemoryError
 import ctypes
@@ -5,7 +7,7 @@ import os
 import subprocess
 import time
 
-ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v03.04.2023 , Enjoy :D ")
+ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v08.04.2023 , Enjoy :D ")
 os.system('cls')
 rwm = ReadWriteMemory()
 
@@ -16,11 +18,12 @@ try:
     while True:
         print("https://github.com/XiAnzheng-ID/DR2C-Python-Trainer-with-Inventory-Editor")
         print("Feature:\n1. Unlimited Loot/Supply")
-        print("2. P1 Unlimited Ammo")
+        print("2. Unlimited Ammo")
         print("3. Unlimited Health")
         print("4. P1 Max Stat")
         print("5. Weapon & Item Editor")
-        print("6. Manual Supply Editor\n")
+        print("6. Quantity Editor")
+        print("7. Manual Supply Editor\n")
         choice = int(input("Choice?: "))
 
         if choice == 1:
@@ -39,10 +42,13 @@ try:
             subprocess.Popen(["python", "Editor.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
             os.system('cls')
         elif choice == 6:
+            subprocess.Popen(["python", "Quantity.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            os.system('cls')
+        elif choice == 7:
             subprocess.Popen(["python", "Manual.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
             os.system('cls')
         else:
-            print("Error , put 1-5 on the console")
+            print("Error , put 1-7 on the console")
             time.sleep(2)
             os.system('cls')
 
@@ -50,6 +56,7 @@ except ReadWriteMemoryError as error:
     print(error)
     print("Error cant write/found the process , try run it as administrator")
     print("Does the game running? , or check the process name in the code and try again")
+    print("Do you use Steam or GOG version?")
 
 #ignore this as the memory pattern in this game is static no need to find the pointer
 #base = 0x400000
