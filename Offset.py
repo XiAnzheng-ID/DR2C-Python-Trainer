@@ -32,7 +32,7 @@ Morale = process.get_pointer(0x9DC9A0)
 player1_Inventory = process.get_pointer(0x9DCA8C)
 
 #Inventory
-#inventory_Slot = process.get_pointer(0x9DC480)
+inventory_Slot = process.get_pointer(0x9DC480)
 item_Quantity = process.get_pointer(0x9DC484)
 
 #P2-P4 Health:
@@ -58,4 +58,7 @@ p4r = process.get_pointer(0x9DD314)
 p4s = process.get_pointer(0x9DD318)
 p4g = process.get_pointer(0x9DD308)
 p4b = process.get_pointer(0x9DD340)
+
+#Inventory Slot:
+#bagInventory = process.get_pointer(0x9DC480)
 

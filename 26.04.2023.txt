@@ -14,8 +14,9 @@ Whats new?
 - Removed Unlimited Battery ammo seems thats the culprit of bugged unlimited ammo
   but ill try to add it back when i found a workaround
 
-MUST DO on first time run : type and run "pip install ReadWriteMemory" in python console
-how to use? just run the main.py easy as that :D
+Version 26.04.2023
+Just a small optimization to the code and add some checking
+to the requierment module
 
 Special Thanks to: 
 -Steam User @guiLe(https://steamcommunity.com/profiles/76561197966239551)

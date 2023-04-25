@@ -1,16 +1,35 @@
-print("if you see this text\ndo (pip install ReadWriteMemory) on python console\nwithout the () symbol")
-print("or read the version text") 
-from ReadWriteMemory import ReadWriteMemory
-from ReadWriteMemory import ReadWriteMemoryError
+import sys
+import subprocess
 import ctypes
 import os
-import subprocess
 import time
 
 ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v08.04.2023 , Enjoy :D ")
 os.system('cls')
-rwm = ReadWriteMemory()
+print('Checking required module....')
+time.sleep(2)
+try:
+    from ReadWriteMemory import ReadWriteMemory
+    from ReadWriteMemory import ReadWriteMemoryError
+    print('Required module is installed')
+    time.sleep(2)
+    os.system('cls')
 
+except ModuleNotFoundError:
+    print('Required module is NOT installed!!!')
+    print('Installing Required Module....')
+
+    python = sys.executable
+    subprocess.check_call(
+        [python, '-m', 'pip', 'install', 'ReadWriteMemory'],
+        stdout=subprocess.DEVNULL
+    )
+
+finally:
+    from ReadWriteMemory import ReadWriteMemory
+    from ReadWriteMemory import ReadWriteMemoryError
+
+rwm = ReadWriteMemory()
 try:
     process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
     process.open()
