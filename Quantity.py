@@ -17,4 +17,5 @@ while True:
     print("Open the text file for more information")
     Quantity = int(input("Quantity?: "))
     process.write(Offset.item_Quantity, Quantity)
+    
     os.system('cls')

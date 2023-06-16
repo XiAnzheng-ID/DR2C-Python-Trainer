@@ -18,12 +18,25 @@ Version 26.04.2023
 Just a small optimization to the code and add some checking
 to the requierment module
 
+Version 16.06.2023
+Whats new?
+-Improvement and Cleaning to the Console UI
+-On and Off Toggle
+-Still working on CPU Usage Fix (Seems Python side problem , but ill try find a workaround)
+-Still Working on making the executable (idk why it doest work in executable version)
+
+!!!READ!!! :
+-MUST DO on first time run : type and run "pip install ReadWriteMemory" in python console
+ (ignore if you use the executable version)
+-how to use? just run the main.py easy as that :D
+-Some Feature may have bug in it 
+
 Special Thanks to: 
 -Steam User @guiLe(https://steamcommunity.com/profiles/76561197966239551)
  his tutorial help me a lot to study this game :D (https://steamcommunity.com/sharedfiles/filedetails/?id=749219319)
 
 My Feature?:
--Player 1 First slot Invetory Editor (One and Only out there :D)
+-Player 1 First slot Invetory Editor
 -Item Quantity Editor
 -Unlimited Health & Ammo
 -Stat Hack (In Progress)

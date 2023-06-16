@@ -23,6 +23,3 @@ process.write(Offset.Medkit, edit)
 process.write(Offset.doltAmmo, edit)
 
 os.system('cls')
-print("Done :D")
-print("This window will close by itself in 3 sec")
-time.sleep(3)

@@ -1,17 +1,10 @@
 from ReadWriteMemory import ReadWriteMemory
 import Offset
-import ctypes
-import os
 
-ctypes.windll.kernel32.SetConsoleTitleW("P1 Unlimited Ammo")
-os.system('cls')
 rwm = ReadWriteMemory()
 process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
 process.open()
 
-print("this feature a little but bugged read the .txt file for more information")
-print("Dont Close this window just minimized it")
-print("Close it when you want to turn off this feature")
 while True:
     #P1
     process.write(Offset.doltAmmo, 500)

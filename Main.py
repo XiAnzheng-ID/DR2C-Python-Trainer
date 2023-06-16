@@ -4,7 +4,7 @@ import ctypes
 import os
 import time
 
-ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v08.04.2023 , Enjoy :D ")
+ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v16.06.2023 , Enjoy :D ")
 os.system('cls')
 print('Checking required module....')
 time.sleep(2)
@@ -34,28 +34,45 @@ try:
     process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
     process.open()
 
+    status = [False] * 4
+    subprocesses = [None] * 4
     while True:
+        os.system('cls')
         print("https://github.com/XiAnzheng-ID/DR2C-Python-Trainer-with-Inventory-Editor")
-        print("Feature:\n1. Unlimited Loot/Supply")
-        print("2. Unlimited Ammo")
-        print("3. Unlimited Health")
-        print("4. P1 Max Stat")
+        print("Feature:")
+        print("ON" if status[0] else "OFF"," 1. Unlimited Loot/Supply")
+        print("ON" if status[1] else "OFF"," 2. Unlimited Ammo")
+        print("ON" if status[2] else "OFF"," 3. Unlimited Health")
+        print("ON" if status[3] else "OFF"," 4. P1 Max Stat")
         print("5. Weapon & Item Editor")
         print("6. Quantity Editor")
         print("7. Manual Supply Editor\n")
         choice = int(input("Choice?: "))
 
+        #Changing the status
+        if 1 <= choice <= 4:
+            status[choice - 1] = not status[choice - 1]
+            
+            # Terminate the subprocess if the status is OFF
+            if not status[choice - 1] and subprocesses[choice - 1] is not None:
+                subprocesses[choice - 1].terminate()
+                subprocesses[choice - 1] = None
+    
         if choice == 1:
-            subprocess.Popen(["python", "Loot.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            if status[0]:
+                subprocesses[0] = subprocess.Popen([sys.executable, "Loot.py"], creationflags=subprocess.CREATE_NO_WINDOW)
             os.system('cls')
         elif choice == 2:
-            subprocess.Popen(["python", "Ammo.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            if status[1]:
+                subprocesses[1] = subprocess.Popen([sys.executable, "Ammo.py"], creationflags=subprocess.CREATE_NO_WINDOW)
             os.system('cls')
         elif choice == 3:
-            subprocess.Popen(["python", "Health.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            if status[2]:
+                subprocesses[2] = subprocess.Popen([sys.executable, "Health.py"], creationflags=subprocess.CREATE_NO_WINDOW)
             os.system('cls')
         elif choice == 4:
-            subprocess.Popen(["python", "Stats.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
+            if status[3]:
+                subprocesses[3] = subprocess.Popen([sys.executable, "Stats.py"], creationflags=subprocess.CREATE_NO_WINDOW)
             os.system('cls')
         elif choice == 5:
             subprocess.Popen(["python", "Editor.py"], creationflags=subprocess.CREATE_NEW_CONSOLE)
