@@ -31,7 +31,7 @@ finally:
 
 rwm = ReadWriteMemory()
 try:
-    process = rwm.get_process_by_name("prog-GOG.exe") #change the process name to what version u use
+    process = rwm.get_process_by_name("prog.exe") #change the process name to what version u use
     process.open()
 
     status = [False] * 4

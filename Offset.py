@@ -1,7 +1,7 @@
 from ReadWriteMemory import ReadWriteMemory
 
 rwm = ReadWriteMemory()
-process = rwm.get_process_by_name("prog-GOG.exe")
+process = rwm.get_process_by_name("prog.exe")
 process.open()
 
 #Inventory:
