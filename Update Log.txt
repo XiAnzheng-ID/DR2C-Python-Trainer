@@ -25,22 +25,18 @@ Whats new?
 -Still working on CPU Usage Fix (Seems Python side problem , but ill try find a workaround)
 -Still Working on making the executable (idk why it doest work in executable version)
 
+Version 09.01.2024
+Whats new?
+-Code optimization (CPU Usage problem fixed YEAYYYYY , no more Hogging all the CPU :D)
+-Executable Released !!!! YEAY :D
+
 !!!READ!!! :
--MUST DO on first time run : type and run "pip install ReadWriteMemory" in python console
- (ignore if you use the executable version)
--how to use? just run the main.py easy as that :D
+-how to use? just run the main.py easy as that :D (ignore the app.py as thats for me build the executable file)
 -Some Feature may have bug in it 
 
 Special Thanks to: 
 -Steam User @guiLe(https://steamcommunity.com/profiles/76561197966239551)
  his tutorial help me a lot to study this game :D (https://steamcommunity.com/sharedfiles/filedetails/?id=749219319)
-
-My Feature?:
--Player 1 First slot Invetory Editor
--Item Quantity Editor
--Unlimited Health & Ammo
--Stat Hack (In Progress)
--Manual Loot/Supply Editor
 
 Note for stats :
 base value i found 67109633 (use 256 increment value) or use 98300 for maximum value i can find

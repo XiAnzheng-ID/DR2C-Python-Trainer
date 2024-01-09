@@ -1,59 +1,29 @@
-import sys
-import subprocess
 import threading
 import ctypes
 import os
 import time
+from ReadWriteMemory import ReadWriteMemory
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
-# checking required 3rd party module
-print('Checking required module....')
-time.sleep(2)
-try:
-    from ReadWriteMemory import ReadWriteMemory
-    from ReadWriteMemory import ReadWriteMemoryError
-    print('Required module is installed')
-    time.sleep(2)
-    os.system('cls')
-
-except ModuleNotFoundError:
-    print('Required module is NOT installed!!!')
-    print('Installing Required Module....')
-
-    python = sys.executable
-    subprocess.check_call(
-        [python, '-m', 'pip', 'install', 'ReadWriteMemory'],
-        stdout=subprocess.DEVNULL
-    )
-
-finally:
-    from ReadWriteMemory import ReadWriteMemory
-    from ReadWriteMemory import ReadWriteMemoryError
-
-# using threading so it can run in the background and check the status
 def background(script, stop_event):
     threading.Thread(target=script, args=(stop_event,)).start()
 
-#Stop threading a.k.a the script
 def create_stop_event():
     return threading.Event()
 
-# Script Status
 unlimited_loot_status = False
 unlimited_ammo_status = False
 unlimited_health_status = False
 max_stat_status = False
 
 try:
-    # importing other scripts
     import Ammo
     import Health
     import Loot
     import Manual
     import Stats
+
     rwm = ReadWriteMemory()
-    process = rwm.get_process_by_name("prog.exe")  # change the process name to what version u use
+    process = rwm.get_process_by_name("prog.exe")
     process.open()
 
     while True:
@@ -113,6 +83,8 @@ try:
             time.sleep(2)
             os.system('cls')
 
-except ReadWriteMemoryError as error:
+except Exception as ex:
+    print(f"Unhandled exception: {ex}")
     print("Error cant write/found the process , try run it as administrator")
     print("Does the game running?")
+    input("Press Enter to close this app")
