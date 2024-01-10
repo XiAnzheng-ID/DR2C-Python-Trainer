@@ -5,7 +5,9 @@ import ctypes
 import os
 import time
 
-os.system('cls' if os.name == 'nt' else 'clear')
+#checking the os type and clear the terminal
+def cls():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # checking required 3rd party module
 print('Checking required module....')
@@ -58,7 +60,7 @@ try:
 
     while True:
         ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v09.01.2024 , Enjoy :D ")
-        os.system('cls')
+        cls()
         print("https://github.com/XiAnzheng-ID/Death-Road-2-Canada-Trainer-by-XiAnzheng")
         print("Feature:")
         print(f"1.[{'ON' if unlimited_loot_status else 'OFF'}] Unlimited Loot")
@@ -111,7 +113,7 @@ try:
         else:
             print("Error, put 1-7 on the console")
             time.sleep(2)
-            os.system('cls')
+            cls()
 
 except ReadWriteMemoryError as error:
     print("Error cant write/found the process , try run it as administrator")

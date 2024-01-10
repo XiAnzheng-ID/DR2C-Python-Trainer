@@ -4,16 +4,19 @@ import os
 import time
 from ReadWriteMemory import ReadWriteMemory
 
+unlimited_loot_status = False
+unlimited_ammo_status = False
+unlimited_health_status = False
+max_stat_status = False
+
+def cls():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def background(script, stop_event):
     threading.Thread(target=script, args=(stop_event,)).start()
 
 def create_stop_event():
     return threading.Event()
-
-unlimited_loot_status = False
-unlimited_ammo_status = False
-unlimited_health_status = False
-max_stat_status = False
 
 try:
     import Ammo
@@ -28,7 +31,7 @@ try:
 
     while True:
         ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v09.01.2024 , Enjoy :D ")
-        os.system('cls')
+        cls()
         print("https://github.com/XiAnzheng-ID/Death-Road-2-Canada-Trainer-by-XiAnzheng")
         print("Feature:")
         print(f"1.[{'ON' if unlimited_loot_status else 'OFF'}] Unlimited Loot")
@@ -81,7 +84,7 @@ try:
         else:
             print("Error, put 1-7 on the console")
             time.sleep(2)
-            os.system('cls')
+            cls()
 
 except Exception as ex:
     print(f"Unhandled exception: {ex}")

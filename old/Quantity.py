@@ -4,7 +4,7 @@ import ctypes
 import os
 
 ctypes.windll.kernel32.SetConsoleTitleW("Inventory Quantity Editor")
-os.system('cls')
+os.system("cls")
 
 rwm = ReadWriteMemory()
 process = rwm.get_process_by_name("prog.exe") #change the process name to what version u use
@@ -19,4 +19,4 @@ print("Open the text file for more information")
 quantity = int(input("Quantity?: "))
 process.write(Offset.item_Quantity, quantity)
     
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system("cls")

@@ -5,14 +5,8 @@ import ctypes
 import os
 import time
 
-#importing other scripts
-import Ammo
-import Health
-import Loot
-import Manual
-
 ctypes.windll.kernel32.SetConsoleTitleW("DR2C Trainer by XiAnzheng v16.06.2023 , Enjoy :D ")
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system("cls")
 
 print('Checking required module....')
 time.sleep(2)

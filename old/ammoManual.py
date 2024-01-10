@@ -1,6 +1,5 @@
 from ReadWriteMemory import ReadWriteMemory
 import Offset
-import ctypes
 import os
 
 rwm = ReadWriteMemory()
@@ -19,4 +18,4 @@ process.write(Offset.Shotgun, item)
 process.write(Offset.Medkit, item)
 process.write(Offset.doltAmmo, item)
 
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system("cls")

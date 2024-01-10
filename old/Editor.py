@@ -4,7 +4,7 @@ import ctypes
 import os
 
 ctypes.windll.kernel32.SetConsoleTitleW("Inventory Editor")
-os.system('cls')
+os.system("cls")
 
 rwm = ReadWriteMemory()
 process = rwm.get_process_by_name("prog.exe") #change the process name to what version u use
@@ -17,4 +17,4 @@ print("open the text file for item/weapon number list and more information")
 item= int(input("item ID?: "))
 process.write(Offset.player1_Inventory, item)
     
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system("cls")

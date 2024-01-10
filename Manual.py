@@ -4,7 +4,8 @@ import ctypes
 import os
 
 ctypes.windll.kernel32.SetConsoleTitleW("Manual Loot/Supply Editor")
-os.system('cls' if os.name == 'nt' else 'clear')
+def cls():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 rwm = ReadWriteMemory()
 process = rwm.get_process_by_name("prog.exe") #change the process name to what version u use
@@ -15,7 +16,7 @@ def invalid():
 
 #item script
 def item():
-        os.system('cls' if os.name == 'nt' else 'clear')
+        cls()
         print("This is a manual loot/supply editor you can set how much loot/supply you want")
         print("Your loot can still decreased by an event or trade")
         print("Choose 1 on the main window for Unlimited Loot/Supply\n")
@@ -37,7 +38,7 @@ def item():
 
 #quantity script
 def quantity():
-        os.system('cls' if os.name == 'nt' else 'clear')
+        cls()
         print("THIS CAN BREAK YOUR SAVEDATA BECAREFULL WHAT ITEM OR WEAPON YOU EDIT")
         print("DO NOT EDIT WHEN THERE IS NO ITEM/WEAPON AT FIRST INVENTORY SLOT")
         print("IT WILL BUG YOUR SAVE DATA AND PROBABLY CORRUPT IT")
@@ -55,7 +56,7 @@ def quantity():
 
 #weapon script
 def editor():
-        os.system('cls' if os.name == 'nt' else 'clear')
+        cls()
         print("THIS CAN BREAK YOUR SAVEDATA BECAREFULL WHAT ITEM OR WEAPON YOU EDIT")
         print("This will edit out anything your first charcter inventory slot have")
         print("open the text file for item/weapon number list and more information")

@@ -2,16 +2,16 @@
 Still Working on GUI Version
 More info read the Update Log 
 
-## Module Used 
-*ReadWriteMemory
-
-### Feature 
+## Feature 
 * Unlimited Health
 * Unlimited Loot
 * Unlimited Ammo
 * Max Stats (P1 Only & Underdevelopment)
-* Invetory Editor
+* Inventory Editor
 * item Quantity Editor
+
+### Module Used 
+* ReadWriteMemory
 
 ### How to use?
 Just run the main.py 
