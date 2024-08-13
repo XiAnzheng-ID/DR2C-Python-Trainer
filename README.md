@@ -7,10 +7,10 @@
 * Max Stats (P1 Only & WIP)
 * Item & Quantity Editor
 
-### Module Used 
+## Module Used 
 * ReadWriteMemory
 
-### How to use?
+## How to use?
 Just run the app.py 
 or compile it with anything you like CX_Freeze , Nuitka , PyInstaller\
 Example iam using Nuitka:
