@@ -8,7 +8,6 @@ Special Thanks to:
 
 Note for stats :
 base value i found 67109633 (use 256 increment value) or use 98300 for maximum value i can find
-the data type probably long text or double based on my research
 i cant hack some stat like speed as that nearly impossible to auto scan as there is no way
 to change value in game like upgrade or training but i will try to find a workaround
 
@@ -18,13 +17,11 @@ just put your item/weapon you want to edit the Quantity number
 on the first inventory slot (top left corner) 
 
 Note for inventory editor: 
-i was gonna put it at the first inventory slot (top left corner) 
-but it seems glitch out the game a little bit (you can change this in the code if you prefer inventory slot)
 Some items are set so they cannot be traded or dropped. Ex: the wand. 
 so it can cause some bug or glitches you dont want to , or dont use this feature at all
 as this can break your savedata BE CAREFULL
 i havent list all the item ID so yeah you can try it your self(USE ANOTHER SAVESLOT OR DATA)
-i found out the max item id is 229 beyond that is unusable item
+i found out the max item id is 248 beyond that is unusable item
 
 6  - blowtorch
 7  - chainsaw
@@ -131,3 +128,5 @@ i found out the max item id is 229 beyond that is unusable item
 108- killfu
 109- hammer
 110- ballpeen hammer
+
+test the rest yourself

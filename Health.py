@@ -13,4 +13,4 @@ def health(stop_event):
         process.write(Offset.p3Health, 6)
         process.write(Offset.p4Health, 6)
 
-        time.sleep(2)
+        time.sleep(0.1)

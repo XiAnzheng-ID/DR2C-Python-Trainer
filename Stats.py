@@ -9,5 +9,4 @@ def stats(stop_event):
 
     while not stop_event.is_set():
         process.write(Offset.Morale, 98300)
-
         time.sleep(2)

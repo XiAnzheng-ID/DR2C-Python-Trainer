@@ -36,6 +36,6 @@ def ammo(stop_event):
         process.write(Offset.p4g, 500)
         #process.write(Offset.p4b, 500)
 
-        time.sleep(2)
+        time.sleep(0.1)
 
 

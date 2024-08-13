@@ -29,3 +29,8 @@ Whats new?
 Whats new?
 -Code optimization (CPU Usage problem fixed YEAYYYYY , no more Hogging all the CPU :D)
 -Executable Released !!!! YEAY :D
+
+> Version v13.08.2024
+Whats new?
+- Added GUI (Finally YEAY :D)
+- Omentum Update

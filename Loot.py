@@ -14,5 +14,5 @@ def loot(stop_event):
         process.write(Offset.Rifle, 99999)
         process.write(Offset.Shotgun, 99999)
         process.write(Offset.Medkit, 99999)
-        time.sleep(2)
+        time.sleep(0.1)
     
