@@ -1,6 +1,4 @@
 # Death Road 2 Canada python trainer by XiAnzheng
-Still Working on GUI Version
-More info read the Update Log 
 
 ## Feature 
 * Unlimited Health
