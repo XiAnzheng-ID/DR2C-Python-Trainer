@@ -6,9 +6,8 @@ More info read the Update Log
 * Unlimited Health
 * Unlimited Loot
 * Unlimited Ammo
-* Max Stats (P1 Only & Underdevelopment)
-* Inventory Editor
-* item Quantity Editor
+* Max Stats (P1 Only & WIP)
+* Item & Quantity Editor
 
 ### Module Used 
 * ReadWriteMemory
