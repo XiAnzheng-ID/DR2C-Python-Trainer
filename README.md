@@ -9,6 +9,7 @@
 
 ## Module Used 
 * ReadWriteMemory
+* CustomTkinter (for GUI)
 
 ## How to use?
 Just run the app.py 
