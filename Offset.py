@@ -14,6 +14,8 @@ Shotgun = process.get_pointer(0x9E2278)
 
 #P1 Ammo & health:
 Health = process.get_pointer(0x9E2718)
+sHealth = process.get_pointer(0x9E4998)
+aHealth = process.get_pointer(0x9E3578)
 gasAmmo = process.get_pointer(0x9E2868)
 doltAmmo = process.get_pointer(0x9E2870)
 rifleAmmo = process.get_pointer(0x9E2874)
@@ -32,10 +34,13 @@ Battery = process.get_pointer(0x9E2888)
 inventory_Slot = process.get_pointer(0x9E2280)
 item_Quantity = process.get_pointer(0x9E2284)
 
-#P2-P4 Health:
+#P2-P4 Health: (idk why all player have different offset for special and normal character)
 p2Health = process.get_pointer(0x9E29F8)
-p3Health = process.get_pointer(0x9E3298)
+p2sHealth = process.get_pointer(0x9E3E18)
+p3Health = process.get_pointer(0x9E2CD8) 
+p3sHealth = process.get_pointer(0x9E3298)
 p4Health = process.get_pointer(0x9E2FB8)
+p4sHealth = process.get_pointer(0x9E29F8)
 
 #P2-P4 Ammo
 p2d = process.get_pointer(0x9E2B50)
@@ -55,3 +60,9 @@ p4r = process.get_pointer(0x9E3114)
 p4s = process.get_pointer(0x9E3118)
 p4g = process.get_pointer(0x9E3108)
 p4b = process.get_pointer(0x9E3140)
+
+sd = process.get_pointer(0x9E33F0)
+sr = process.get_pointer(0x9E33F4)
+ss = process.get_pointer(0x9E33F8)
+sg = process.get_pointer(0x9E33E8)
+sb = process.get_pointer(0x9E3140)

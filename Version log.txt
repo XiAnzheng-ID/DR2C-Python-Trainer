@@ -34,3 +34,8 @@ Whats new?
 Whats new?
 - Added GUI (Finally YEAY :D)
 - Omentum Update
+
+> Version v19.08.2024
+Whats new?
+-Special Character Unlimited Health Fix (Not Working on Animal Character)
+-Fixed some Character slot Unlimited Ammo not working 

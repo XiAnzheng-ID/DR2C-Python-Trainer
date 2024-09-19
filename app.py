@@ -98,7 +98,7 @@ try:
 
     app = ctk.CTk()
     app.geometry("500x300")
-    app.title("DR2C Trainer by XiAnzheng v13.08.2024")
+    app.title("DR2C Trainer by XiAnzheng v19.09.2024")
     app.protocol("WM_DELETE_WINDOW", on_closing)
 
     # Toggle
