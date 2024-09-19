@@ -1,10 +1,10 @@
 # Death Road 2 Canada python trainer by XiAnzheng
 
 ## Feature 
-* Unlimited Health
+* Unlimited Health (Not Working on Animal)
 * Unlimited Loot
 * Unlimited Ammo
-* Max Stats (P1 Only & WIP)
+* Max Stats (WIP)
 * Item & Quantity Editor
 
 ## Module Used 
